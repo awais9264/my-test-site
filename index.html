@@ -1,0 +1,1070 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تفصيل ستائر ومجالس الرياض | Custom Curtains & Majlis Riyadh</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #1a5f7a;
+            --secondary-color: #d4a574;
+            --accent-color: #8b4513;
+            --light-color: #f8f5f2;
+            --dark-color: #2c3e50;
+            --shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+            --border-radius: 8px;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: var(--dark-color);
+            background-color: var(--light-color);
+            line-height: 1.6;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        header {
+            background-color: white;
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .logo i {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+        }
+        
+        .logo-text h1 {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin-bottom: 5px;
+        }
+        
+        .logo-text p {
+            font-size: 0.9rem;
+            color: var(--dark-color);
+        }
+        
+        .language-switcher {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .lang-btn {
+            padding: 8px 15px;
+            border: 1px solid var(--primary-color);
+            background: transparent;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+        
+        .lang-btn.active {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        .lang-btn:hover:not(.active) {
+            background-color: rgba(26, 95, 122, 0.1);
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+        
+        nav a {
+            text-decoration: none;
+            color: var(--dark-color);
+            font-weight: 600;
+            transition: var(--transition);
+            padding: 5px 0;
+            position: relative;
+        }
+        
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+        
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--primary-color);
+            transition: var(--transition);
+        }
+        
+        nav a:hover::after, nav a.active::after {
+            width: 100%;
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            cursor: pointer;
+        }
+        
+        /* Hero */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1558&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+        }
+        
+        .hero h2 {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 30px;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 15px 35px;
+            border-radius: var(--border-radius);
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+        }
+        
+        .cta-button:hover {
+            background-color: var(--accent-color);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        /* Sections */
+        .section-title {
+            text-align: center;
+            margin: 60px 0 40px;
+            color: var(--primary-color);
+            font-size: 2.2rem;
+            position: relative;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 4px;
+            background-color: var(--secondary-color);
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+        
+        .service-card {
+            background-color: white;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        .service-img {
+            height: 220px;
+            overflow: hidden;
+        }
+        
+        .service-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+        
+        .service-card:hover .service-img img {
+            transform: scale(1.05);
+        }
+        
+        .service-content {
+            padding: 25px;
+        }
+        
+        .service-content h3 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+        
+        .about {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+            margin-bottom: 60px;
+            flex-wrap: wrap;
+        }
+        
+        .about-image {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .about-image img {
+            width: 100%;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+        }
+        
+        .about-content {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .about-content h3 {
+            color: var(--primary-color);
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+        
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .feature {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            width: calc(50% - 10px);
+        }
+        
+        .feature i {
+            color: var(--secondary-color);
+            font-size: 1.2rem;
+        }
+        
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 60px;
+        }
+        
+        .gallery-item {
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            height: 250px;
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        
+        .contact {
+            background-color: white;
+            padding: 60px 20px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            margin-bottom: 60px;
+        }
+        
+        .contact-content {
+            display: flex;
+            gap: 50px;
+            flex-wrap: wrap;
+        }
+        
+        .contact-info {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .contact-form {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+        
+        .contact-item i {
+            background-color: var(--light-color);
+            color: var(--primary-color);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: var(--border-radius);
+            font-family: inherit;
+        }
+        
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary-color);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark-color);
+            color: white;
+            padding: 60px 0 30px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-column h3 {
+            color: var(--secondary-color);
+            margin-bottom: 25px;
+            font-size: 1.4rem;
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+        
+        .footer-links a {
+            color: #ddd;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .footer-links a:hover {
+            color: var(--secondary-color);
+            padding-right: 8px;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+            color: #aaa;
+        }
+        
+        /* Responsive */
+        @media (max-width: 992px) {
+            .hero h2 {
+                font-size: 2.2rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .header-content {
+                flex-wrap: wrap;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            nav {
+                width: 100%;
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.5s ease;
+            }
+            
+            nav.active {
+                max-height: 300px;
+                margin-top: 20px;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                gap: 0;
+            }
+            
+            nav li {
+                width: 100%;
+                text-align: center;
+                padding: 12px 0;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            }
+            
+            .hero {
+                padding: 80px 20px;
+            }
+            
+            .hero h2 {
+                font-size: 1.8rem;
+            }
+            
+            .feature {
+                width: 100%;
+            }
+        }
+        
+        /* Language Styles */
+        .lang-content {
+            display: none;
+        }
+        
+        .lang-content.active {
+            display: block;
+        }
+        
+        body[dir="rtl"] {
+            text-align: right;
+        }
+        
+        body[dir="ltr"] {
+            text-align: left;
+        }
+    </style>
+</head>
+<body dir="rtl">
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    
+                    <div class="logo-text">
+                        <h1>تفصيل ستائر ومجالس الرياض</h1>
+                        <p>Custom Curtains & Majlis Riyadh</p>
+                    </div>
+                </div>
+                
+                <div class="language-switcher">
+                    <button class="lang-btn active" data-lang="ar">العربية</button>
+                    <button class="lang-btn" data-lang="en">English</button>
+                </div>
+                
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+                
+                <nav id="mainNav">
+                    <ul>
+                        <li><a href="#home" class="active" data-key="home">الرئيسية</a></li>
+                        <li><a href="#services" data-key="services">خدماتنا</a></li>
+                        <li><a href="#about" data-key="about">من نحن</a></li>
+                        <li><a href="#gallery" data-key="gallery">معرض الأعمال</a></li>
+                        <li><a href="#contact" data-key="contact">اتصل بنا</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="lang-content active" data-lang="ar">
+                <h2>تفصيل ستائر ومجالس فاخرة بجودة عالية</h2>
+                <p>نقدم لكم أفضل خدمات تفصيل الستائر والمجالس في الرياض بخبرة تزيد عن 15 عاماً. نضمن لكم الجودة العالية والتسليم في الموعد المحدد.</p>
+                <a href="#contact" class="cta-button">اطلب خدمة</a>
+            </div>
+            <div class="lang-content" data-lang="en">
+                <h2>Luxury Custom Curtains & Awais Web Developer
+                </h2>
+                <p>We provide the best custom curtains and majlis services in Riyadh with over 15 years of experience. We guarantee high quality and on-time delivery.</p>
+                <a href="#contact" class="cta-button">Request Service</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="container">
+        <div class="lang-content active" data-lang="ar">
+            <h2 class="section-title">خدماتنا</h2>
+        </div>
+        <div class="lang-content" data-lang="en">
+            <h2 class="section-title">Our Services</h2>
+        </div>
+        
+        <div class="services">
+            <div class="service-card">
+                <div class="service-img">
+                    <img src="1.jpg" alt="Curtain Service">
+                </div>
+                <div class="service-content">
+                    <div class="lang-content active" data-lang="ar">
+                        <h3>تفصيل ستائر</h3>
+                        <p>نقوم بتفصيل جميع أنواع الستائر المنزلية والمكتبية بأفضل الأقمشة والتصاميم العصرية والكلاسيكية.</p>
+                    </div>
+                    <div class="lang-content" data-lang="en">
+                        <h3>Custom Curtains</h3>
+                        <p>We customize all types of home and office curtains with the best fabrics and modern and classic designs.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-img">
+                    <img src="https://images.unsplash.com/photo-1581539250439-c96689b516dd?ixlib=rb-4.0.3&auto=format&fit=crop&w=870&q=80" alt="Majlis Service">
+                </div>
+                <div class="service-content">
+                    <div class="lang-content active" data-lang="ar">
+                        <h3>تفصيل مجالس</h3>
+                        <p>تصميم وتفصيل مجالس عربية وأوروبية فاخرة تناسب ذوقكم وتلبي احتياجات مساحات منازلكم.</p>
+                    </div>
+                    <div class="lang-content" data-lang="en">
+                        <h3>Custom Majlis</h3>
+                        <p>Design and customize luxury Arabic and European majlis that suit your taste and meet the needs of your home spaces.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-img">
+                    <img src="https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?ixlib=rb-4.0.3&auto=format&fit=crop&w=1031&q=80" alt="Installation Service">
+                </div>
+                <div class="service-content">
+                    <div class="lang-content active" data-lang="ar">
+                        <h3>تركيب وصيانة</h3>
+                        <p>نوفر خدمات التركيب المحترف مع فريق متخصص، بالإضافة إلى خدمات الصيانة والدعم الفني.</p>
+                    </div>
+                    <div class="lang-content" data-lang="en">
+                        <h3>Installation & Maintenance</h3>
+                        <p>We provide professional installation services with a specialized team, in addition to maintenance and technical support services.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="container">
+        <div class="lang-content active" data-lang="ar">
+            <h2 class="section-title">من نحن</h2>
+        </div>
+        <div class="lang-content" data-lang="en">
+            <h2 class="section-title">About Us</h2>
+        </div>
+        
+        <div class="about">
+            <div class="about-image">
+                <img src="https://images.unsplash.com/photo-1615529328331-f8917597711f?ixlib=rb-4.0.3&auto=format&fit=crop&w=870&q=80" alt="About Us">
+            </div>
+            <div class="about-content">
+                <div class="lang-content active" data-lang="ar">
+                    <h3>خبرة تزيد عن 15 عاماً في تفصيل الستائر والمجالس</h3>
+                    <p>نحن شركة متخصصة في تفصيل الستائر والمجالس في الرياض، نتميز بتقديم أعلى مستويات الجودة والالتزام بمواعيد التسليم. نعمل مع أفضل المواد الخام وأحدث التصاميم لتلبية تطلعات عملائنا.</p>
+                    
+                    <div class="features">
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>جودة عالية في المواد والتنفيذ</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>تصاميم تناسب جميع الأذواق</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>أسعار تنافسية وضمان على المنتج</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>خدمة ما بعد البيع ودعم فني مستمر</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="lang-content" data-lang="en">
+                    <h3>Over 15 Years of Experience in Custom Curtains & Majlis</h3>
+                    <p>We are a company specialized in custom curtains and majlis in Riyadh, distinguished by providing the highest levels of quality and commitment to delivery times. We work with the best raw materials and latest designs to meet our customers' aspirations.</p>
+                    
+                    <div class="features">
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>High quality in materials and execution</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Designs to suit all tastes</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Competitive prices and product warranty</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>After-sales service and continuous technical support</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="container">
+        <div class="lang-content active" data-lang="ar">
+            <h2 class="section-title">معرض الأعمال</h2>
+        </div>
+        <div class="lang-content" data-lang="en">
+            <h2 class="section-title">Our Work Gallery</h2>
+        </div>
+        
+        <div class="gallery">
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?ixlib=rb-4.0.3&auto=format&fit=crop&w=857&q=80" alt="Project 1">
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1578894381166-d6d7e6cb41e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=870&q=80" alt="Project 2">
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1630547576334-42e9cd5b3c4b?ixlib=rb-4.0.3&auto=format&fit=crop&w=870&q=80" alt="Project 3">
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1622372738946-62e02505feb3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1032&q=80" alt="Project 4">
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="container">
+        <div class="lang-content active" data-lang="ar">
+            <h2 class="section-title">اتصل بنا</h2>
+        </div>
+        <div class="lang-content" data-lang="en">
+            <h2 class="section-title">Contact Us</h2>
+        </div>
+        
+        <div class="contact">
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="lang-content active" data-lang="ar">
+                        <h3>معلومات التواصل</h3>
+                        
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>العنوان</h4>
+                                <p>الرياض، المملكة العربية السعودية</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h4>الهاتف</h4>
+                                <p>+966 50 123 4567</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>البريد الإلكتروني</h4>
+                                <p>info@custom-curtains-riyadh.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <h4>ساعات العمل</h4>
+                                <p>من الأحد إلى الخميس: 8 صباحاً - 10 مساءً</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="lang-content" data-lang="en">
+                        <h3>Contact Information</h3>
+                        
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Address</h4>
+                                <p>Riyadh, Saudi Arabia</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h4>Phone</h4>
+                                <p>+966 50 123 4567</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <p>info@custom-curtains-riyadh.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <h4>Working Hours</h4>
+                                <p>Sunday to Thursday: 8 AM - 10 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <div class="lang-content active" data-lang="ar">
+                        <h3>ارسل لنا رسالة</h3>
+                        
+                        <form id="contactFormAr">
+                            <div class="form-group">
+                                <label for="nameAr">الاسم</label>
+                                <input type="text" id="nameAr" class="form-control" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="phoneAr">رقم الهاتف</label>
+                                <input type="tel" id="phoneAr" class="form-control" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="emailAr">البريد الإلكتروني</label>
+                                <input type="email" id="emailAr" class="form-control">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="serviceAr">نوع الخدمة</label>
+                                <select id="serviceAr" class="form-control">
+                                    <option value="curtains">تفصيل ستائر</option>
+                                    <option value="majlis">تفصيل مجالس</option>
+                                    <option value="maintenance">صيانة</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="messageAr">الرسالة</label>
+                                <textarea id="messageAr" class="form-control" rows="5"></textarea>
+                            </div>
+                            
+                            <button type="submit" class="cta-button">إرسال الطلب</button>
+                        </form>
+                    </div>
+                    
+                    <div class="lang-content" data-lang="en">
+                        <h3>Send Us a Message</h3>
+                        
+                        <form id="contactFormEn">
+                            <div class="form-group">
+                                <label for="nameEn">Name</label>
+                                <input type="text" id="nameEn" class="form-control" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="phoneEn">Phone Number</label>
+                                <input type="tel" id="phoneEn" class="form-control" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="emailEn">Email</label>
+                                <input type="email" id="emailEn" class="form-control">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="serviceEn">Service Type</label>
+                                <select id="serviceEn" class="form-control">
+                                    <option value="curtains">Custom Curtains</option>
+                                    <option value="majlis">Custom Majlis</option>
+                                    <option value="maintenance">Maintenance</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="messageEn">Message</label>
+                                <textarea id="messageEn" class="form-control" rows="5"></textarea>
+                            </div>
+                            
+                            <button type="submit" class="cta-button">Submit Request</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <div class="lang-content active" data-lang="ar">
+                        <h3>تفصيل ستائر ومجالس الرياض</h3>
+                        <p>نقدم لكم أفضل خدمات تفصيل الستائر والمجالس في الرياض بخبرة تزيد عن 15 عاماً. نضمن لكم الجودة العالية والتسليم في الموعد المحدد.</p>
+                    </div>
+                    <div class="lang-content" data-lang="en">
+                        <h3>Custom Curtains & Majlis Riyadh</h3>
+                        <p>We provide the best custom curtains and majlis services in Riyadh with over 15 years of experience. We guarantee high quality and on-time delivery.</p>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <div class="lang-content active" data-lang="ar">
+                        <h3>روابط سريعة</h3>
+                        <ul class="footer-links">
+                            <li><a href="#home">الرئيسية</a></li>
+                            <li><a href="#services">خدماتنا</a></li>
+                            <li><a href="#about">من نحن</a></li>
+                            <li><a href="#gallery">معرض الأعمال</a></li>
+                            <li><a href="#contact">اتصل بنا</a></li>
+                        </ul>
+                    </div>
+                    <div class="lang-content" data-lang="en">
+                        <h3>Quick Links</h3>
+                        <ul class="footer-links">
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#services">Services</a></li>
+                            <li><a href="#about">About Us</a></li>
+                            <li><a href="#gallery">Gallery</a></li>
+                            <li><a href="#contact">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <div class="lang-content active" data-lang="ar">
+                        <h3>تابعنا على</h3>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-snapchat"></i></a>
+                            <a href="#"><i class="fab fa-whatsapp"></i></a>
+                        </div>
+                    </div>
+                    <div class="lang-content" data-lang="en">
+                        <h3>Follow Us</h3>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-snapchat"></i></a>
+                            <a href="#"><i class="fab fa-whatsapp"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <div class="lang-content active" data-lang="ar">
+                    <p>© 2023 تفصيل ستائر ومجالس الرياض. جميع الحقوق محفوظة.</p>
+                </div>
+                <div class="lang-content" data-lang="en">
+                    <p>© 2023 Custom Curtains & Majlis Riyadh. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Auto-detect browser language
+            const browserLang = navigator.language || navigator.userLanguage;
+            const userLang = browserLang.startsWith('ar') ? 'ar' : 'en';
+            
+            // Set initial language
+            setLanguage(userLang);
+            
+            // Language switcher
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const lang = this.getAttribute('data-lang');
+                    setLanguage(lang);
+                });
+            });
+            
+            // Set language function
+            function setLanguage(lang) {
+                // Update active button
+                document.querySelectorAll('.lang-btn').forEach(btn => {
+                    btn.classList.remove('active');
+                    if (btn.getAttribute('data-lang') === lang) {
+                        btn.classList.add('active');
+                    }
+                });
+                
+                // Show/hide language content
+                document.querySelectorAll('.lang-content').forEach(content => {
+                    content.classList.remove('active');
+                    if (content.getAttribute('data-lang') === lang) {
+                        content.classList.add('active');
+                    }
+                });
+                
+                // Update body direction
+                if (lang === 'ar') {
+                    document.body.dir = 'rtl';
+                } else {
+                    document.body.dir = 'ltr';
+                }
+                
+                // Update navigation
+                updateNavigation(lang);
+            }
+            
+            // Update navigation text
+            function updateNavigation(lang) {
+                const navLinks = document.querySelectorAll('nav a');
+                if (lang === 'ar') {
+                    navLinks[0].textContent = 'الرئيسية';
+                    navLinks[1].textContent = 'خدماتنا';
+                    navLinks[2].textContent = 'من نحن';
+                    navLinks[3].textContent = 'معرض الأعمال';
+                    navLinks[4].textContent = 'اتصل بنا';
+                } else {
+                    navLinks[0].textContent = 'Home';
+                    navLinks[1].textContent = 'Services';
+                    navLinks[2].textContent = 'About Us';
+                    navLinks[3].textContent = 'Gallery';
+                    navLinks[4].textContent = 'Contact Us';
+                }
+            }
+            
+            // Mobile menu toggle
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const mainNav = document.getElementById('mainNav');
+            
+            if (mobileMenuBtn) {
+                mobileMenuBtn.addEventListener('click', function() {
+                    mainNav.classList.toggle('active');
+                    const icon = this.querySelector('i');
+                    icon.classList.toggle('fa-bars');
+                    icon.classList.toggle('fa-times');
+                });
+            }
+            
+            // Close mobile menu on link click
+            document.querySelectorAll('nav a').forEach(link => {
+                link.addEventListener('click', function() {
+                    mainNav.classList.remove('active');
+                    if (mobileMenuBtn) {
+                        const icon = mobileMenuBtn.querySelector('i');
+                        icon.classList.remove('fa-times');
+                        icon.classList.add('fa-bars');
+                    }
+                });
+            });
+            
+            // Form submission
+            document.getElementById('contactFormAr')?.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const name = document.getElementById('nameAr').value;
+                const phone = document.getElementById('phoneAr').value;
+                alert(`شكراً ${name}! تم استلام طلبك وسنتصل بك قريباً على الرقم ${phone}`);
+                this.reset();
+            });
+            
+            document.getElementById('contactFormEn')?.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const name = document.getElementById('nameEn').value;
+                const phone = document.getElementById('phoneEn').value;
+                alert(`Thank you ${name}! Your request has been received and we will contact you soon at ${phone}`);
+                this.reset();
+            });
+            
+            // Smooth scrolling
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
